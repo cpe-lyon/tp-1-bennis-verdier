@@ -42,6 +42,9 @@ Si l'on veut supprimer un fichier, on utilise la commande `$ rm NomDuFichier`. P
 
 ### Commandes importantes
 
-Pour afficher la date et l'heure, la commande est `$ date`, à ne pas confondre avec la commande `$ time` qui permet de déterminer le temps que met un processus à s'executer.
+Pour afficher la date et l'heure, la commande est `$ date`, à ne pas confondre avec la commande `$ time` qui permet de déterminer le temps que met un processus à s'executer.  
+La commande `$ ls` permet d'afficher la liste de tous les répertoires et fichiers qui se trouvent dans le répertoire courant.
 
-La commande `$ ls` permet de lister les élements présents dans le répertoire courant. Pour afficher les élements cachés (
+L'executable de la commande **ls** se trouve dans le répertoire :  
+
+:sparkles: Astuce : pour afficher le tous l
