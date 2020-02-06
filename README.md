@@ -39,3 +39,9 @@ Cependant, `sudo` permet de lancer des programmes, et on ne peut pas le mettre d
 On peut créer une arborescence de répertoire et fichier en ligne de commande. Pour créer un répertoire, la commande est `$ mkdir NomDeDossier`. Pour créer un fichier, on utilise `$ touch NomDeFichier`. On combinant ces commandes et les variantes de `cd`, on peut donc créer une arborescence.
 
 Si l'on veut supprimer un fichier, on utilise la commande `$ rm NomDuFichier`. Pour supprimer un dossier **vide**, on peut utiliser `$ rmdir NomDuDossier` ou `$ rm -d NomDuDossier`. Pour supprimer un répertoire contenant d'autres répertoires et des fichiers, il faut utiliser la commande `$ rm -r NomDuDossier` qui va supprimer récursivement tous les éléments.
+
+### Commandes importantes
+
+Pour afficher la date et l'heure, la commande est `$ date`, à ne pas confondre avec la commande `$ time` qui permet de déterminer le temps que met un processus à s'executer.
+
+La commande `$ ls` permet de lister les élements présents dans le répertoire courant. Pour afficher les élements cachés (
