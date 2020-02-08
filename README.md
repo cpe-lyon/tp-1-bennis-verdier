@@ -61,3 +61,36 @@ On écrit `yo` à la fin du fichier **plop** et on ne l'écrase pas, ainsi si on
 
 :sparkles: Astuce : pour déterminer le type d'un fichier, on peut utiliser la commmande `$ file NomDuFichier`.  
 
+Lorsqu'on modifie le contenu d'un fichier toto qu'on a lié à un fichier titi grace à la commande `ln toto titi`,  on s'apercoit que cela modifie les deux fichiers mais la supression de toto n'influe pas sur l'existence de titi.
+Mais dans le cas où un autre fichier tutu est liée symboliquement avec titi `ln -s titi tutu`, une modification de titi influe sur tutu et inversement et la supression de titi provoque la supression de tutu aussi.
+
+Les raccourcis claviers `CTRL S` et `CTRL Q` permettent respectivement d'interrompre et de reprendre le défilement à l'écran.
+A noté que la touche `Arrêtdef` presentes dans la plupart des claviers permet aussi d'avoir le même résultat.
+
+Pour afficher les 5 permieres lignes d'un fichers(syslog) il faut taper la commande : `$ head -n 5 syslog`.
+Pour afficher les 15 dernieres lignes d'un fichers il faut taper la commande : `$ tail -n 15 syslog`.
+Pour afficher les lignes 10 à 20 d'un fichers il faut taper la commande : `$ sed -n '10 20p'syslog`.
+
+La commande `dmesg | less` permet d'afficher la mémoire tampon du noyau `dmesg` page par page `less`.
+
+Le fichier `/etc/passwd` permet d'afficher la liste de tous les utilisateurs du système, pour afficher sa page de manuel il suffit de taper `$ man passwd`.
+
+Pour afficher seulement la première colonne triées par ordre alphabétique inverse il peut utiliser la commande : `$ cut -d ':' -f1 passwd | sort -r ` le caractère entre guillements permet de délimiter les colonnes, `-f1` correspond à la première colonnes et `sort -r ` sert à trier par ordre alphabétique inverse.
+
+ Le nombre d’utilisateurs ayant un compte sur cette machine est défini par la commande `wc -l`.
+ 
+ Pour chercher le nombre de pages de manuel comportant le mot-clé conversion dans leur description il faut écrire `$ man -k conversion | wc -l`.
+
+A l’aide de la commande find on peut aussi recherchez tous les fichiers se nommant passwd présents sur la machine :`$ find / -name 'passwd' |  less`, pour enregistrer cette liste dans un nouveau fichier list_passwd_files, il faudrait rajouter `> list_passwd-files.txt` en sortie de la commande file et pour redigerer ses erreurs vers le fichier spécial dev/null on peut utiliser : ` `.
+
+Dans un dossier personnel, pour chercher où est défini un alias on peut taper la commande `$ grep -rl -null`.
+¨Par contre pour trouver un fichier, il vaudrait mieux taper la commande `locate`.
+Mais dans le cas où un fichier vient d'être créer, il faudrait mettre à jour le locate (avec anacron).
+
+## Exercice 3 Découverte de l’éditeur de texte nano
+
+Pour ouvrir un fichier avec l'éditeur de texte nano, il faut se placer dans le dossier du fichier en question et taper : `nano log.txt`.
+Pour mofifier un mot en un autre il suffit de taper `ALT R` et se laisser guider par nano. Pour manipuler le fichier les raccourcis `CTRL K ` pour couper et `CTRL U` pour coller sont indispensables. Pour annuler la dernière action il faut taper `ALT U`.
+
+## Exercice 4 Personnalisation du shell
+
