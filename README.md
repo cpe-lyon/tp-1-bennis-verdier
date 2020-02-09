@@ -94,3 +94,10 @@ Pour mofifier un mot en un autre il suffit de taper `ALT R` et se laisser guider
 
 ## Exercice 4 Personnalisation du shell
 
+Décommenter la ligne `force_color_prompt=yes` et recharger le fichier .bashrc avec la commande ` source .bashrc` permet de faire passer l'invite de commande en couleurs. On obtient user@host en vert et chemin_courant en bleu.
+
+La séquence \[\e[01;35m\]\A permet d'afficher l'heure (\A) en violet, dont le code couleur est 35.  
+Les séquences \[\e[00m\] - , \[\e[00m\]: et \[\e[00m\]\$ permettent d'afficher respectivement le tiret, les deux points et le $ en blanc, dont le code couleur est 0.  
+La séquence \[\e[01;32m]\u@\h permet d'afficher les noms de l'utilisateur et de la machine en vert, dont le code couleur est 32.  
+La séquence \[\e[01;36m\]\w permet d'afficher le chemin courant en cyan, dont le code couleur est 36.
+
